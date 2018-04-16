@@ -31,8 +31,13 @@ class TasksController < ApplicationController
 
   def show
     @list = List.find(params[:list_id])
-    @task = Task.find(params[:id])
     render :show
+  end
+
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
+    redirect_to list_task_path
   end
 
   private
