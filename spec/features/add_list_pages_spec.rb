@@ -14,6 +14,4 @@ describe "the add a list process" do
     click_on 'Create List'
     expect(page).to have_content 'errors'
   end
-
-
 end
