@@ -17,7 +17,6 @@ class TasksController < ApplicationController
   def edit
     @list = List.find(params[:list_id])
     @task = Task.find(params[:id])
-    render :edit
   end
 
   def update
@@ -31,7 +30,6 @@ class TasksController < ApplicationController
 
   def show
     @list = List.find(params[:list_id])
-    render :show
   end
 
   def destroy
